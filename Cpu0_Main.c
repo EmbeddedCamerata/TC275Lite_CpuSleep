@@ -54,6 +54,10 @@ int core0_main(void)
 
     while(1)
     {
+        if (_flag2 == TRUE) {
+            _flag2 = FALSE;
+            Cpu0_req_sleep();
+        }
     }
     return (1);
 }

@@ -87,5 +87,6 @@ void stmIsr1(void)
 
     led_toggle(LED2);
     runStm0();
-    Cpu0_req_sleep();
+    _flag2 = TRUE;
+    IfxCpu_setCoreMode(&MODULE_CPU2, IfxCpu_CoreMode_idle);
 }
